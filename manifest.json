@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "LinkShuffler",
+  "description": "This extension redirects links to a randomly selected link on the page",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [{
+    "matches": ["http://*/*", "https://*/*"],
+    "js": ["content.js"]
+  }],
+  "permissions": [
+    "activeTab",
+    "http://*/*",
+    "https://*/*",
+    "webRequest"
+  ]
+}
